@@ -1,34 +1,25 @@
-\# Retrieve Operation
+# Retrieve Operation
 
-
-
-\*\*Objective:\*\* Retrieve and display all attributes of the Book instance in the Django shell.
-
-
+**Objective:** Retrieve and display all attributes of the Book instance in the Django shell.
 
 ---
 
-
-
-\*\*Command:\*\*
-
-
+**Command:**
 
 ```python
-
 from bookshelf.models import Book
 
+# Retrieve the book by its title
+book = Book.objects.get(title="1984")
 
-
-\# Retrieve the book we just created
-
-book = Book.objects.get(id=1)
-
-
-
-\# Display the book
-
+# Display the book
 book  # <Book: Book object (1)>  <- expected output
+
+# Display individual attributes
+book.title            # '1984'
+book.author           # 'George Orwell'
+book.publication_year # 1949
+
 
 
 
