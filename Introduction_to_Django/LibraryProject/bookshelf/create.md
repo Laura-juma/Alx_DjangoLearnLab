@@ -1,22 +1,36 @@
+\# Create Operation
+
+
+
+\*\*Objective:\*\* Create a Book instance in the Django shell.
+
+
+
+---
+
+
+
+\*\*Command:\*\*
+
+
+
+```python
+
 from bookshelf.models import Book
 
 
 
-my\_book= Book(
+\# Create a new book instance using objects.create
 
-title="1984",
+Book.objects.create(
 
-author= "George Orwell",
+&nbsp;   title="1984",
 
-publication\_year= 1949
+&nbsp;   author="George Orwell",
 
-)
+&nbsp;   publication\_year=1949
 
-
-
-my\_book.save()  # Object is saved
+)  # <Book: Book object (1)>  <- expected output
 
 
-
-Book.objects.all()  # <QuerySet \[<Book: 1984>]>  <- expected output
 
