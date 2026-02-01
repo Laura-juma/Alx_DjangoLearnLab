@@ -19,7 +19,6 @@ for book in books_in_library:
 
 library_name = "Central Library"
 library = Library.objects.get(name=library_name)
-librarian_qs = Librarian.objects.filter(library=library)
-librarian = librarian_qs.first()
+librarian = Librarian.objects.get(library=library)
 
 print(librarian.name)
