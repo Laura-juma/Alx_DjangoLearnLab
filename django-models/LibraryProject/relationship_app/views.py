@@ -29,6 +29,16 @@ class SignUpView(CreateView):
   success_url = reverse_lazy('login')
   template_name = 'relationship_app/register.html'
 
+from django.contrib.auth import login
+from django.contrib.auth import authenticate
+
+"""def my_login_view(request):
+  user = authenticate(username = "user", password="password")
+  if user:
+    login(request, user)"""
+
+
+
   
   
 
