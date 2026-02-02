@@ -9,10 +9,10 @@ from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     
-    path('books/', views.list_books_view, name='books'),
+    path('books/', list_books_view, name='books'),
 
     
-    path('library/<int:pk>/', views.LibraryDetailView.as_view(), name='library_detail'),
+    path('library/<int:pk>/', LibraryDetailView.as_view(), name='library_detail'),
 
     
     path(
@@ -31,7 +31,7 @@ urlpatterns = [
     
     path(
         'register/',
-        views.register.as_view(),
+        register,
         name='register'
     ),
 ]
