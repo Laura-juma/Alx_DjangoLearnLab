@@ -147,3 +147,7 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+import os
+
+PORT = int(os.environ.get("PORT", 8000))
